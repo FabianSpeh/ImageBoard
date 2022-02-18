@@ -1,0 +1,20 @@
+<% if notice %>
+  <aside id="notice"><%= notice %></aside>
+<% end %>
+
+<h1>Imageboard</h1>
+
+<% @posts.each do |post| %>
+<div class="container">
+<%= image_tag(post.image) %>
+<p>
+<%= "Caption: " + post.caption.to_s %>
+
+</p>
+
+</div>
+
+
+ 
+<% end %>
+

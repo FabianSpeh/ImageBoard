@@ -1,0 +1,20 @@
+// Place all the styles related to the Board controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+img { 
+    display: block; /* Take the whole available width */ 
+    max-width: 100%; /* responsive */
+   
+    
+    
+     
+   } 
+   .container { 
+    width: 15%; /* Five images in a row */ 
+    min-height: 100px;
+    padding: 15px;
+    float: left; /* To allow multiple blocks align together in a row */
+    
+    
+   } 
