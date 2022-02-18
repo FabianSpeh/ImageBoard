@@ -6,6 +6,7 @@
 <p>
   <strong>Caption:</strong>
   <%= @post.caption %></p>
+  <%= current_user.getName%>
 
 </div>
 <%= link_to 'Edit', edit_post_path(@post) %> |

@@ -1,4 +1,4 @@
-<p id="notice"><%= notice %></p>
+<!---<p id="notice"><%= notice %></p>
 
 <h1>Posts</h1>
 
@@ -14,6 +14,7 @@
     <% @posts.each do |post| %>
       <tr>
         <td><%= post.caption %></td>
+        <td><%= image_tag(post.image)%>
         <td><%= link_to 'Show', post %></td>
         <td><%= link_to 'Edit', edit_post_path(post) %></td>
         <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -25,3 +26,27 @@
 <br>
 
 <%= link_to 'New Post', new_post_path %>
+--->
+
+<% if notice %>
+  <aside id="notice"><%= notice %></aside>
+<% end %>
+
+<h1>Imageboard</h1>
+
+<% @posts.each do |post| %>
+<div class="container">
+<%= image_tag(post.image) %>
+<p>
+<%= "Caption: " + post.caption.to_s %>
+
+</p>
+<%= link_to 'Show', post %></td>
+<%= link_to 'Edit', edit_post_path(post) %></td>
+<%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+</div>
+
+
+ 
+<% end %>
+

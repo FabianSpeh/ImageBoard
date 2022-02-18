@@ -17,6 +17,7 @@
   <a class="active"><%=link_to "Home", board_index_path%></a>
    <%if user_signed_in?%>
    <%= link_to "Upload Image", new_post_path %>
+   <%= link_to "My Uploads", posts_path %>
   <%= link_to "Sign out",destroy_user_session_path, method: :delete %>
   <%else%>
   <%= link_to "Sign up", new_user_registration_path %>

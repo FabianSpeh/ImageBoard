@@ -9,6 +9,8 @@
 <%= image_tag(post.image) %>
 <p>
 <%= "Caption: " + post.caption.to_s %>
+<%@id = User.find_by id: post.user_id%>
+<%=@id.getName%>
 
 </p>
 
