@@ -14,11 +14,23 @@
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
  <div class="topnav ">
-  <a class="active" href="#home">Home</a>
-  <a href="#news">News</a>
-  <a href="#contact">Login</a>
+  <a class="active"><%=link_to "Home", board_index_path%></a>
+   <%if user_signed_in?%>
+   <%= link_to "Upload Image", new_post_path %>
+  <%= link_to "Sign out",destroy_user_session_path, method: :delete %>
+  <%else%>
+  <%= link_to "Sign up", new_user_registration_path %>
+  <%= link_to "Sign in", new_user_session_path %>
+  <%end%>
+ 
+  <div class="topnav-right">
   
+  <%if user_signed_in?%>
+  <a class="dontHover"><%="Welcome, " + current_user.getName %></a>
+  <%end%>
+   
   
+</div>
 </div>
     <%= yield %>
   </body>

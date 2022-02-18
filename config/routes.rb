@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   get 'board/index'
   resources :posts
   root to: 'board#index'
