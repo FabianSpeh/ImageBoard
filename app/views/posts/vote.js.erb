@@ -1,0 +1,3 @@
+document.getElementById("upvote-<%= @post.id %>").innerHTML = "<%= j render "posts/upvote_link", post: @post %>";
+document.getElementById("votes-total-<%= @post.id %>").innerHTML = "<%= j render "posts/votes_total", post: @post %>";
+

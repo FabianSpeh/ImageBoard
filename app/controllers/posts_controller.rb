@@ -6,6 +6,17 @@ class PostsController < ApplicationController
     @posts = Post.where(:user_id => current_user.id)
   end
 
+  def upvote
+    @post = Post.find(params[:id])
+   if current_user.voted_up_on? @post
+      @post.unvote_by current_user
+   else
+    @post.upvote_by current_user
+    
+  end
+  render "vote.js.erb"
+end
+
   # GET /posts/1 or /posts/1.json
   def show
   end

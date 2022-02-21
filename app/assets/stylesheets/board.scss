@@ -17,4 +17,14 @@ img {
     float: left; /* To allow multiple blocks align together in a row */
     
     
-   } 
+   }
+
+   .inline {
+
+    float:left;
+    padding-right: 10px;
+   }
+
+   .caption {
+    font-weight: bold;
+   }

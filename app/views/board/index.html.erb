@@ -7,12 +7,18 @@
 <% @posts.each do |post| %>
 <div class="container">
 <%= image_tag(post.image) %>
-<p>
+<p class="caption">
 <%= "Caption: " + post.caption.to_s %>
-<%@id = User.find_by id: post.user_id%>
-<%=@id.getName%>
-
 </p>
+<p>
+<%@id = User.find_by id: post.user_id%>
+<%="by: " + @id.getName%>
+</p>
+<div>
+<%= render "posts/upvote_link", post: post%>
+<%= render "posts/votes_total", post: post%>
+</div>
+
 
 </div>
 

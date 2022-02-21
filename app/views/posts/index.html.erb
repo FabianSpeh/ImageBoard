@@ -39,8 +39,14 @@
 <%= image_tag(post.image) %>
 <p>
 <%= "Caption: " + post.caption.to_s %>
-
 </p>
+
+<p>
+<%= render "posts/votes_total", post: post%>
+</p>
+
+
+
 <%= link_to 'Show', post %></td>
 <%= link_to 'Edit', edit_post_path(post) %></td>
 <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>

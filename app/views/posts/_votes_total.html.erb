@@ -1,0 +1,8 @@
+<%= content_tag "div", class:"inline", id: "votes-total-#{post.id}" do %>
+<% if post.weighted_total == 1%>
+<%= post.weighted_total.to_s + " Like"%>
+<% else %>
+<%= post.weighted_total.to_s + " Likes"%>
+<% end %>
+
+<%end%>
