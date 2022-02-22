@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     member do
       patch "upvote", to: "posts#upvote"
     end
+    resources :comments
   end
 
   root to: 'board#index'

@@ -1,3 +1,39 @@
 // Place all the styles related to the Posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+.show-container {
+
+margin:auto;
+width: 25%; 
+min-height: 100px;
+padding-top: 50px;
+}
+#comment-body{
+
+    font-size: 18px;
+}
+
+
+
+
+ 
+
+.comment-container { 
+    min-width: 80%; /* Five images in a row */ 
+    float: left; /* To allow multiple blocks align together in a row */
+      
+    
+    padding: 50px;
+    
+}
+
+.vertical-line{
+    border-right: 2px solid green;
+    height: 500px;
+}
+
+.wrapper {
+    overflow: hidden;
+}
+

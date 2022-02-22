@@ -17,6 +17,9 @@
 <div>
 <%= render "posts/upvote_link", post: post%>
 <%= render "posts/votes_total", post: post%>
+<% if user_signed_in? %>
+<%= link_to 'Show Comments', post %></td>
+<% end %>
 </div>
 
 

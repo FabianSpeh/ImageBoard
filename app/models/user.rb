@@ -7,6 +7,7 @@ class User < ApplicationRecord
    acts_as_voter      
 
   has_many :posts
+  has_many :comments
          def getName
           return self.email.split('@')[0].capitalize
          end

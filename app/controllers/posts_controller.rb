@@ -3,7 +3,11 @@ class PostsController < ApplicationController
 
   # GET /posts or /posts.json
   def index
+    if user_signed_in?
     @posts = Post.where(:user_id => current_user.id)
+    else
+      redirect_to board_index_path
+    end
   end
 
   def upvote
@@ -19,11 +23,18 @@ end
 
   # GET /posts/1 or /posts/1.json
   def show
+    if user_signed_in? == false
+      redirect_to board_index_path
+    end
   end
 
   # GET /posts/new
   def new
+    if user_signed_in?
     @post = Post.new
+  else
+    redirect_to board_index_path
+  end
   end
 
   # GET /posts/1/edit
