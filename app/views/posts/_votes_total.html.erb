@@ -1,3 +1,5 @@
+<!-- https://blog.corsego.com/gem-acts-as-votable-2> --->
+
 <%= content_tag "div", class:"inline", id: "votes-total-#{post.id}" do %>
 <% if post.weighted_total == 1%>
 <%= post.weighted_total.to_s + " Like"%>

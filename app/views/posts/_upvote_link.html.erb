@@ -1,3 +1,5 @@
+<!-- https://blog.corsego.com/gem-acts-as-votable-2> --->
+ 
 <%= content_tag "div", class:"inline", id: "upvote-#{post.id}" do %>
 
 <%= link_to upvote_post_path(post), method: :patch , remote: true do %>

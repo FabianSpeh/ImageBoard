@@ -9,7 +9,8 @@ class PostsController < ApplicationController
       redirect_to board_index_path
     end
   end
-
+  
+# https://blog.corsego.com/gem-acts-as-votable-2
   def upvote
     @post = Post.find(params[:id])
    if current_user.voted_up_on? @post
