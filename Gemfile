@@ -29,6 +29,8 @@ gem 'devise'
 
 gem 'acts_as_votable'
 
+gem 'acts-as-taggable-on', '~> 9.0', '>= 9.0.1'
+
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
 

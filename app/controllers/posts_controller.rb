@@ -9,7 +9,7 @@ class PostsController < ApplicationController
       redirect_to board_index_path
     end
   end
-  
+
 # https://blog.corsego.com/gem-acts-as-votable-2
   def upvote
     @post = Post.find(params[:id])
@@ -89,6 +89,6 @@ end
 
     # Only allow a list of trusted parameters through.
     def post_params
-      params.require(:post).permit(:caption, :image, :ispublic)
+      params.require(:post).permit(:caption, :image, :ispublic, :tag_list)
     end
 end

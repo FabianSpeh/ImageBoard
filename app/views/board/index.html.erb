@@ -8,7 +8,7 @@
 <div class="container">
 <%= image_tag(post.image) %>
 <p class="caption">
-<%= "Caption: " + post.caption.to_s %>
+<%= post.caption.to_s %>
 </p>
 <p>
 <%@id = User.find_by id: post.user_id%>

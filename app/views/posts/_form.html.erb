@@ -26,6 +26,10 @@
 <%= form.label :ispublic, "visible to everyone" %>
 <%= form.radio_button :ispublic, "false" %>
 <%= form.label :ispublic, "only visible to registered users" %>
+</div>
+  <div class="field">
+   <%= form.text_field :tag_list, value: form.object.tag_list.to_s %>
+  </div>
 
 
 </p>

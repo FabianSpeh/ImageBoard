@@ -6,8 +6,10 @@
 
 
 <p>
-  <strong>Caption:</strong>
-  <%= @post.caption %>
+  <strong><%= @post.caption %></strong>
+ <p>
+ <%= "Tags: " + @post.tag_list.to_s%>
+ </p>
   </p>
   <% if user_signed_in? && current_user.id == @post.user_id %>
 <%= link_to 'Edit', edit_post_path(@post) %> |
