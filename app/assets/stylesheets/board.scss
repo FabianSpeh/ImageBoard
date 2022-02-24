@@ -3,18 +3,18 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
 img { 
-    display: block; /* Take the whole available width */ 
-    max-width: 100%; /* responsive */
+    display: block; 
+    max-width: 100%;
    
     
     
      
    } 
    .container { 
-    width: 15%; /* Five images in a row */ 
+    width: 15%; 
     min-height: 100px;
     padding: 15px;
-    float: left; /* To allow multiple blocks align together in a row */
+    float: left;
     
     
    }
@@ -27,4 +27,8 @@ img {
 
    .caption {
     font-weight: bold;
+   }
+
+   .padder {
+       padding-top: 25px;
    }

@@ -88,6 +88,6 @@ end
 
     # Only allow a list of trusted parameters through.
     def post_params
-      params.require(:post).permit(:caption, :image)
+      params.require(:post).permit(:caption, :image, :ispublic)
     end
 end

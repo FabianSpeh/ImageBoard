@@ -2,8 +2,8 @@
   <aside id="notice"><%= notice %></aside>
 <% end %>
 
-<h1>Imageboard</h1>
-
+<div class="padder">/<div>
+<%if user_signed_in?%>
 <% @posts.each do |post| %>
 <div class="container">
 <%= image_tag(post.image) %>
@@ -20,12 +20,38 @@
 <% if user_signed_in? %>
 <%= link_to 'Show Comments', post %></td>
 <% end %>
-</div>
-
 
 </div>
 
 
- 
+</div>
 <% end %>
+<% else %>
+
+<% @posts.each do |post| %>
+<% if post.ispublic == true%>
+<div class="container">
+<%= image_tag(post.image) %>
+<p class="caption">
+<%= "Caption: " + post.caption.to_s %>
+</p>
+<p>
+<%@id = User.find_by id: post.user_id%>
+<%="by: " + @id.getName%>
+</p>
+<div>
+<%= render "posts/upvote_link", post: post%>
+<%= render "posts/votes_total", post: post%>
+<% if user_signed_in? %>
+<%= link_to 'Show Comments', post %></td>
+<% end %>
+
+
+</div>
+
+
+</div>
+<%end%>
+<%end%>
+<%end%>
 
