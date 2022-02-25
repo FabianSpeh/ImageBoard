@@ -3,10 +3,11 @@
 <% end %>
 
 <div class="padder">/<div>
+
 <%if user_signed_in?%>
 <% @posts.each do |post| %>
 <div class="container">
-<%= image_tag(post.image) %>
+<%= image_tag(post.image, id: 'board-img') %>
 <p class="caption">
 <%= post.caption.to_s %>
 </p>
@@ -31,9 +32,9 @@
 <% @posts.each do |post| %>
 <% if post.ispublic == true%>
 <div class="container">
-<%= image_tag(post.image) %>
+<%= image_tag(post.image, id: 'board-img') %>
 <p class="caption">
-<%= "Caption: " + post.caption.to_s %>
+<%= post.caption.to_s %>
 </p>
 <p>
 <%@id = User.find_by id: post.user_id%>

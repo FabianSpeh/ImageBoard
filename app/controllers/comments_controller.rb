@@ -6,9 +6,13 @@ class CommentsController < ApplicationController
 
         @comment = current_user.comments.new(comment_params)
         if !@comment.save
+        flash[:alert] = @comment.errors.full_messages[0]
+        else
+           
             
     end
     redirect_to post_path(params[:post_id])
+    
 end
 
 def destroy

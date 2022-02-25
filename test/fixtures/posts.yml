@@ -1,7 +1,8 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  caption: MyText
+  caption: Wow was ein schönes Bild Wow was ein schönes Bild Wow was ein schönes Bild Wow was ein schönes Bild Wow was ein schönes Bild Wow was ein schönes Bild Wow was ein schönes Bild
+  ispublic: true
 
 two:
-  caption: MyText
+  caption: Normaler Text

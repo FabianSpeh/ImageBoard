@@ -1,6 +1,14 @@
+
 <p class="notice"><%= notice %></p>
 <form action="<%= post_comments_path(post) %>" method ="post">
 <input type="hidden" name="authenticity_token">
 <textarea name="comment[body]" rows="8" cols="60"> </textarea>
+<% flash.each do |type, msg| %>
+  <div class ="error-message">
+    <%= msg %>
+   
+  </div>
+<% end %>
 <input type="submit" value="Submit">
 </form>
+

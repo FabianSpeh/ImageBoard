@@ -1,11 +1,12 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  body:
-  post:
-  user: one
+  id: 1
+  body: MyText
+  post: Post.first
+  user: User.first
 
 two:
-  body: MyText
+  body: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec convallis orci. Etiam tincidunt lacinia elit eu rutrum. Pellentesque congue elementum massa, quis tristique ligula feugiat in. Curabitur at augue metus. Donec accumsan mauris eget elementum iaculis. Nam imperdiet vehicula nisi non.
   post: two
   user: two

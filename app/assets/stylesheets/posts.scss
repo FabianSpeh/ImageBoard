@@ -8,6 +8,10 @@ margin:auto;
 width: 25%; 
 min-height: 100px;
 padding-top: 50px;
+
+#show-image {
+    max-height: none !important;
+}
 }
 #comment-body{
 
