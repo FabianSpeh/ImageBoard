@@ -11,5 +11,5 @@ class Post < ApplicationRecord
     validates :image, presence: true
     validates :caption, length: {minimum:1, maximum:50}, allow_blank: true
     validates :tags, allow_blank: true, length: {minimum:1, maximum:30}
-    validates :ispublic, presence: true
+   
 end
